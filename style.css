@@ -1,0 +1,84 @@
+body {
+  min-height: 80vh;
+  background: #0c192c;
+
+}
+
+
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bolhas{
+  position: absolute;
+  display: flex;
+
+}
+
+.bolhas span {
+  opacity: 0.1;
+  width: 30px;
+  height: 30px;
+  background: #e5ff00;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #e5ff0044
+  , 0 0 50px #e5ff00,
+  0 0 100px #e5ff00;
+  animation: animar calc(30s / var(--i)) linear infinite;
+}
+
+@keyframes animar{
+  0%{
+    transform: translateY(85vh) scale(0);
+  }
+
+  100%{
+    transform: translateY(-10vh) scale(1);
+
+  }
+}
+
+
+.bolhas span:nth-of-type(even){
+  background: #2dc3ff;
+  box-shadow: 0 0 0 10px #2dc3ff44
+  , 0 0 50px #2dc3ff,
+  0 0 100px #2dc3ff;
+}
+
+.titulo {
+  text-align: center;
+  color: white;
+}
+
+.tabuleiro{
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game button {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 50px;
+  background: #f7f7f7;
+}
+
+.currentPlayer{
+  color: white;
+}
+
+
+
